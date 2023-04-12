@@ -27,15 +27,19 @@ const PlatformIconList = ({ platforms }: Props) => {
     linux: FaLinux,
     android: FaAndroid,
     ios: MdPhoneIphone,
-    web: BsGlobe
-  }
+    web: BsGlobe,
+  };
 
   return (
     <HStack marginY={1}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color='gray.500' />
+        <Icon
+          key={platform.id}
+          as={iconMap[platform.slug]}
+          color="gray.500"
+        />
       ))}
-    </ HStack>
+    </HStack>
   );
 };
 
